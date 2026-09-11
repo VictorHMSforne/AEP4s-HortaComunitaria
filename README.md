@@ -15,3 +15,15 @@ Trabalho referente a Atividade de Estudo Programado -  4° Semestre
 
 ---
 
+## Lista de Requisitos Funcionais (Escopo)
+
+- **RF01** — O sistema deve permitir o cadastro de terrenos baldios, incluindo endereço, área, status, situação legal e bairro.
+- **RF02** — O sistema deve permitir o cadastro de proprietários e o vínculo destes aos terrenos que possuem.
+- **RF03** — O sistema deve permitir o cadastro e a gestão de contratos entre a prefeitura e os proprietários, contendo valor de aluguel, percentual de produção repassado, incentivo fiscal e tipo de adesão (legal ou voluntária).
+- **RF04** — O sistema deve permitir o cadastro de famílias e o vínculo destas a uma horta comunitária.
+- **RF05** — O sistema deve permitir o cadastro de hortas comunitárias, vinculando-as a um terreno e a um gestor responsável.
+- **RF06** — O sistema deve permitir o cadastro e a contratação de gestores de horta pela prefeitura.
+- **RF07** — O sistema deve permitir o registro da produção de cada horta, com quantidade produzida, data de plantio e data de colheita.
+- **RF08** — O sistema deve permitir o controle de minhocários vinculados às hortas, incluindo o registro da produção de adubo.
+- **RF09** — O sistema deve permitir que a prefeitura realize o levantamento da quantidade de terrenos baldios por bairro.
+
