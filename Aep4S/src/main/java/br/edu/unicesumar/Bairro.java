@@ -14,8 +14,6 @@ public class Bairro {
         this.terrenos = terrenos;
     }
 
-
-
     public void addTerreno(Terreno terreno){
         this.terrenos.add(terreno);
     }
