@@ -4,16 +4,20 @@ public class Terreno {
     private int id;
     private String endereco;
     private double area;
-    private String status;
+    private boolean disponivel;
 
-    public Terreno(int id, String endereco, double area, String status) {
+    public Terreno(int id, String endereco, double area, boolean disponivel) {
         this.id = id;
         this.endereco = endereco;
         this.area = area;
-        this.status = status;
+        this.disponivel=true;
     }
 
-    public void atualizarStatus(String  status){
-        
+    public boolean isDisponivel() {
+        return disponivel;
+    }
+
+    public void setDisponivel(boolean disponivel) {
+        this.disponivel = disponivel;
     }
 }
