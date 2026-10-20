@@ -13,7 +13,7 @@ public class Terreno {
         this.status = status;
     }
 
-    public void atualizarStatus(String: status){
+    public void atualizarStatus(String  status){
         
     }
 }
