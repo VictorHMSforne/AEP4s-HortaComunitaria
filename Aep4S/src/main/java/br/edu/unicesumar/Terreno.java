@@ -4,13 +4,17 @@ public class Terreno {
     private int id;
     private String endereco;
     private double area;
-    private boolean disponivel;
+    private boolean disponivel=true;
+    private Bairro bairro;
 
-    public Terreno(int id, String endereco, double area, boolean disponivel) {
+    public Terreno(int id, String endereco, double area) {
         this.id = id;
         this.endereco = endereco;
         this.area = area;
-        this.disponivel=true;
+    }
+
+    public void setBairro(Bairro bairro){
+        this.bairro = bairro;
     }
 
     public boolean isDisponivel() {
@@ -19,5 +23,13 @@ public class Terreno {
 
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public double getArea() {
+        return area;
     }
 }
