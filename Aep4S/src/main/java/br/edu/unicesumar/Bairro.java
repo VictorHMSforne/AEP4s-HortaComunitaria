@@ -27,10 +27,20 @@ public class Bairro implements MetodosPadroes {
         System.out.printf("Nome Bairro %s", nome);
         System.out.println();
 
-        for(Terreno terreno: terrenos){
-            System.out.printf("Endereço: %s", terreno.getEndereco());
-            System.out.println();
-            System.out.printf("Area %.2f", terreno.getArea());
+        int i=0;
+
+        if(!terrenos.isEmpty()){
+            for(Terreno terreno: terrenos){
+                System.out.printf("| Terreno %d | \n\n", i+1);
+                System.out.printf("Endereço: %s", terreno.getEndereco());
+                System.out.println();
+                System.out.printf("Area %.2f", terreno.getArea());
+                System.out.println();
+                i++;
+            }
+        }else{
+            System.out.printf("Não há terrenos cadastrados neste bairro");
         }
+
     }
 }
