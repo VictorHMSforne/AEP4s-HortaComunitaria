@@ -11,12 +11,20 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public String getNome() {
+        return nome;
     }
 
     public String getCpf() {
         return cpf;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public void setCpf(String cpf) {

@@ -32,6 +32,17 @@ public class Bairro implements MetodosPadroes {
         if(!terrenos.isEmpty()){
             for(Terreno terreno: terrenos){
                 System.out.printf("| Terreno %d | \n\n", i+1);
+                if(terreno.getProprietario() != null){
+                    System.out.printf("Nome proprietário: %s", terreno.getProprietario().getNome());
+                    System.out.println();
+                    System.out.printf("Endereço proprietário: %s", terreno.getProprietario().getEndereco());
+                    System.out.println();
+                    System.out.printf("CPF proprietário: %s", terreno.getProprietario().getCpf());
+                }else{
+                    System.out.printf("O terreno ainda não está vinculado a um proprietário");
+                    System.out.println();
+                }
+
                 System.out.printf("Endereço: %s", terreno.getEndereco());
                 System.out.println();
                 System.out.printf("Area %.2f", terreno.getArea());

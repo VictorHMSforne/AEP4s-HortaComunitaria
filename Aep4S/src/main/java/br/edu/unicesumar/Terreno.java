@@ -38,8 +38,7 @@ public class Terreno {
         return area;
     }
 
-    public void defineProprietario(Proprietario proprietario){
-
+    public Proprietario getProprietario(){
+        return proprietario;
     }
-
 }

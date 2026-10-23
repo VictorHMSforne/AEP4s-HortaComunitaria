@@ -3,7 +3,7 @@ package br.edu.unicesumar;
 public class Main {
     public static void main(String[] args) {
 
-        Pessoa matheus = new Pessoa("Matheus", "49032694855", "Rua Osvaldo Volpato");
+        Proprietario matheus = new Proprietario ("Matheus", "49032694855", "Rua osvaldo Volpato", "44988290951", "matheusrochaa063@gmail.com");
 
         Bairro b1 = new Bairro(1, "Jardim dos Palmares");
 
