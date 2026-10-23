@@ -4,11 +4,10 @@ import java.util.ArrayList;
 
 public class Familia {
     private int id;
-    private ArrayList<Pessoa> pessoas;
+    private ArrayList<Pessoa> pessoas = new ArrayList<>();;
 
     public Familia(int id) {
         this.id = id;
-        this.pessoas = new ArrayList<>();
     }
 
     public ArrayList<Pessoa> getPessoas() {
