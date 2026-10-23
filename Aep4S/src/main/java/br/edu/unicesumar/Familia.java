@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Familia {
     private int id;
-    private ArrayList<Pessoa> pessoas = new ArrayList<>();;
+    private ArrayList<Pessoa> pessoas = new ArrayList<>();
 
     public Familia(int id) {
         this.id = id;
