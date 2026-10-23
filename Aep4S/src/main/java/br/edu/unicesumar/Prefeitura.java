@@ -6,15 +6,15 @@ import java.time.LocalDate;
 
 public class Prefeitura extends Municipio{
     private int id;
-    private String nome;
+    private String nomepref;
     private String cpnj;
     private ArrayList<Terreno> terrenos = new ArrayList<>();
     private ArrayList<Contrato> contratos = new ArrayList<>();
 
-    public Prefeitura(String estado, String cep, String nome, int id, String nome1, String cpnj) {
+    public Prefeitura(String estado, String cep, String nome, int id, String nomepref, String cpnj) {
         super(estado, cep, nome);
         this.id = id;
-        this.nome = nome1;
+        this.nomepref = nomepref;
         this.cpnj = cpnj;
     }
 
@@ -33,4 +33,7 @@ public class Prefeitura extends Municipio{
         this.contratos.add(contrato);
     }
 
+    public String getNomepref() {
+        return nomepref;
+    }
 }
