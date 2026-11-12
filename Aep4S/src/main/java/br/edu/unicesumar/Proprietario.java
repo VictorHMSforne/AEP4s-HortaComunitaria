@@ -6,6 +6,7 @@ public class Proprietario extends Pessoa{
     private String telefone;
     private String email;
     private ArrayList<Terreno> terrenos= new ArrayList<>();
+    private ArrayList<Contrato> contratos = new ArrayList<>();
 
     public Proprietario(String nome, String cpf, String endereco, String telefone, String email) {
         super(nome, cpf, endereco);
@@ -14,7 +15,11 @@ public class Proprietario extends Pessoa{
     }
 
     public void addTerreno(Terreno terreno){
-        this.terrenos.add(terreno);
+        terrenos.add(terreno);
         terreno.setProprietario(this);
+    }
+
+    public void addContrato(Contrato contrato){
+        contratos.add(contrato);
     }
 }

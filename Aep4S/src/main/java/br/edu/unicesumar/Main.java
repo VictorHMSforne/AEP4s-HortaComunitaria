@@ -5,7 +5,7 @@ public class Main {
 
         Proprietario matheus = new Proprietario ("Matheus", "49032694855", "Rua osvaldo Volpato", "44988290951", "matheusrochaa063@gmail.com");
 
-        Prefeitura pref = new Prefeitura("PR", "87160-000", "Mandaguaçu", 1, "Prefeitura de Mandaguaçu", "76.285.329/0001-08");
+        Prefeitura pref = new Prefeitura(1, "Prefeitura de Maringá", "76.282.656/0001-06");
 
         Bairro b1 = new Bairro(1, "Jardim dos Palmares");
 

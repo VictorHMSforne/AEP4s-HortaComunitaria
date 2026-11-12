@@ -64,6 +64,6 @@ public class Terreno implements MetodosPadroes{
         System.out.println();
         System.out.printf("Disponível: %s", disponivel ? "sim" : "nao");
         System.out.println();
-        System.out.printf("Nome prefeitura que o terreno está vinculado: %s", prefeitura.getNomepref());
+        System.out.printf("Nome prefeitura que o terreno está vinculado: %s", prefeitura.getNome());
     }
 }
