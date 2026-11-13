@@ -5,6 +5,7 @@ Projeto da AEP do 4º semestre de Engenharia de Software da UniCesumar. A aplica
 ## Segunda entrega
 
 - [Código-fonte da aplicação](Aep4S/src/main)
+- [Script de criação do banco PostgreSQL](database/criar-banco.sql)
 - [Script de criação das tabelas PostgreSQL](database/schema.sql)
 - [Diretrizes oficiais da AEP](docs/detalhesProjeto/Diretrizes%20Gerais%20da%20AEP%20%284%C2%BA%20Semestre%20de%202026%29.pdf)
 - [Relatório da primeira entrega](docs/detalhesProjeto/AEP%20Horta%20-%20Finalizado.pdf)
@@ -16,7 +17,7 @@ Pré-requisitos: **JDK 21**, **Maven 3.9+** e **PostgreSQL** em execução. Conf
 
 No IntelliJ, abra `Aep4S/pom.xml` como projeto Maven e selecione o JDK 21 como SDK do projeto e como JRE do Maven.
 
-1. Crie um banco dedicado chamado `horta_comunitaria`. No pgAdmin, use **Databases → Create → Database**. Também é possível usar `createdb -U postgres horta_comunitaria`.
+1. No pgAdmin, abra a **Query Tool** do banco de manutenção `postgres` e execute [database/criar-banco.sql](database/criar-banco.sql) uma vez, com autocommit habilitado. Se `horta_comunitaria` já existir, pule esta etapa. Também é possível criar o banco com `createdb -U postgres horta_comunitaria`.
 2. Na raiz do repositório, informe o usuário e a senha do seu PostgreSQL. Se o host, a porta ou o banco forem diferentes dos padrões, ajuste `HORTA_DB_URL`.
 
    **PowerShell**
@@ -40,6 +41,10 @@ No IntelliJ, abra `Aep4S/pom.xml` como projeto Maven e selecione o JDK 21 como S
 3. Abra [http://127.0.0.1:8080](http://127.0.0.1:8080). Para trocar a porta, defina `PORT` antes de iniciar a aplicação.
 
 O Spring executa [database/schema.sql](database/schema.sql) na inicialização. As tabelas existentes são preservadas e o Hibernate valida sua compatibilidade com o modelo Java. O usuário do banco precisa poder criar as tabelas no primeiro uso. A URL padrão é `jdbc:postgresql://localhost:5432/horta_comunitaria`.
+
+Para preparar as tabelas manualmente pelo pgAdmin, abra uma **nova Query Tool** no banco `horta_comunitaria` e execute [database/schema.sql](database/schema.sql). Para a demonstração, se a sua cópia incluir `database/seed.sql`, execute-o nessa mesma Query Tool depois de criar as tabelas. Atualize a página da aplicação para visualizar os dados fictícios.
+
+Para testar a persistência, faça um cadastro pela aplicação, reinicie o sistema usando o mesmo banco e consulte o cadastro novamente.
 
 Se o Java no Windows apresentar `Unable to establish loopback connection` com causa em `UnixDomainSockets.connect0`, execute com `java "-Djdk.net.unixdomain.tmpdir=$env:TEMP/sem-diretorio-de-socket" -jar Aep4S/target/Aep4S-1.0.0.jar`. O caminho informado deve ser inexistente para que o Java use o loopback TCP nesse ambiente.
 
