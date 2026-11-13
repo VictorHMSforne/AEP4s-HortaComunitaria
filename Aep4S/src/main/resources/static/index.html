@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Horta Comunitária</title>
+    <link rel="stylesheet" href="/estilo.css">
+    <script type="module" src="/app.js"></script>
+</head>
+<body>
+    <a class="atalho" href="#conteudo">Ir para o conteúdo</a>
+    <header class="topo">
+        <div class="marca">Horta Comunitária</div>
+        <p>Gestão municipal de terrenos, hortas e distribuição de alimentos</p>
+    </header>
+    <div class="layout">
+        <nav aria-label="Áreas do sistema" id="menu"></nav>
+        <main id="conteudo">
+            <header class="secao">
+                <div>
+                    <h1 id="titulo" tabindex="-1">Terrenos</h1>
+                    <p id="descricao"></p>
+                </div>
+                <button type="button" id="novo">Novo cadastro</button>
+            </header>
+            <div id="aviso" role="status" aria-live="polite"></div>
+            <div id="lista" class="lista"></div>
+        </main>
+    </div>
+    <dialog id="edicao" aria-labelledby="titulo-edicao">
+        <form id="formulario">
+            <h2 id="titulo-edicao"></h2>
+            <div id="campos" class="campos"></div>
+            <p id="erro-edicao" role="alert"></p>
+            <div class="acoes">
+                <button class="secundario" type="button" id="cancelar">Cancelar</button>
+                <button type="submit" id="salvar">Salvar</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>

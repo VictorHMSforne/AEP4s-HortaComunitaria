@@ -1,24 +1,22 @@
 package br.edu.unicesumar;
 
-import java.util.ArrayList;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
 
-public class Familia {
-    private int id;
-    private ArrayList<Pessoa> pessoas = new ArrayList<>();
+@Entity
+@Table(name = "familia")
+public class Familia extends Registro {
+    @NotBlank @Size(max = 160)
+    private String nome;
 
-    public Familia(int id) {
-        this.id = id;
-    }
+    @NotNull @Positive
+    private Long hortaId;
 
-    public ArrayList<Pessoa> getPessoas() {
-        return pessoas;
-    }
-
-    public void addPessoa(Pessoa pessoa){
-        this.pessoas.add(pessoa);
-    }
-
-    public void removePessoa(int i){
-        this.pessoas.remove(i);
+    public Long getHortaId() {
+        return hortaId;
     }
 }

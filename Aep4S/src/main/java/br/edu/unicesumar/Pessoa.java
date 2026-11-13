@@ -1,37 +1,23 @@
 package br.edu.unicesumar;
 
-public class Pessoa {
+import jakarta.persistence.Entity;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+
+@Entity
+@Table(name = "pessoa")
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Pessoa extends Registro {
+    @NotBlank @Size(max = 160)
     private String nome;
+
+    @NotBlank @Pattern(regexp = "[0-9]{11}")
     private String cpf;
+
+    @NotBlank @Size(max = 240)
     private String endereco;
-
-    public Pessoa(String nome, String cpf, String endereco) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.endereco = endereco;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
 }
