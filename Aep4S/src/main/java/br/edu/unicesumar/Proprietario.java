@@ -1,25 +1,17 @@
 package br.edu.unicesumar;
 
-import java.util.ArrayList;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
-public class Proprietario extends Pessoa{
+@Entity
+@Table(name = "proprietario")
+public class Proprietario extends Pessoa {
+    @NotBlank @Size(max = 30)
     private String telefone;
+
+    @NotBlank @Email @Size(max = 160)
     private String email;
-    private ArrayList<Terreno> terrenos= new ArrayList<>();
-    private ArrayList<Contrato> contratos = new ArrayList<>();
-
-    public Proprietario(String nome, String cpf, String endereco, String telefone, String email) {
-        super(nome, cpf, endereco);
-        this.telefone = telefone;
-        this.email = email;
-    }
-
-    public void addTerreno(Terreno terreno){
-        terrenos.add(terreno);
-        terreno.setProprietario(this);
-    }
-
-    public void addContrato(Contrato contrato){
-        contratos.add(contrato);
-    }
 }
